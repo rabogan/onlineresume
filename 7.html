@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Performing addition on a long string of digits!</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/beauty_kanji.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Merriweather&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top">
+    <h2>Add 5555</h2>
+    <ul>
+      <li>Read a very long string of digits (at least 6), then add 5555 to this</li>
+      <ul>
+        <li>You may not convert to integer. In any case, very large numbers (e.g. 10999999999999999999) can't convert in any case, as integers have a well-known maximum limit!</li>
+      </ul>
+      <li>Input → Output</li>
+      <ul>
+        <li>100000 → 105555</li>
+        <li>10001234 → 10006789</li>
+        <li>3001072 → 3006627</li>
+        <li>10999999999 → 11000005554</li>
+        <li>999999999999999999999999999999999 → 100000000000000000000000000000554</li>
+      </ul>
+      <a href="cpluspluslearningjourney.html">Back</a>
+    </div>
+    <div class="middle">
+      <pre>
+      <code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+	string digit_str;
+	cin >> digit_str;
+
+	//Okay, so, you will use a for loop!   However, before jumping in, get the size of the string, and
+	//initialise a variable called 'remainder'.
+
+	int size = (int)digit_str.size();
+	int remainder = 0;
+
+	for (int i = 0; i < size; ++i)
+	{
+		int digit = digit_str[size - 1 - i]-'0';   //This iterates on a character from the back of the string
+		//Subtracting '0' converts it to the integer form.
+
+		//5555 is 4 integers long :)
+		if (i < 4)
+		{
+			digit += 5;   //This adds 5 to the digit...for the LAST four digits in the string :)
+		}
+
+		digit += remainder;
+
+		if (digit >= 10)
+		{
+			digit -= 10;
+			remainder = 1;
+		}
+		else
+		{
+			remainder = 0;
+		}
+
+		digit_str[size-i-1] = digit + '0';  //One of the pitfalls of this exercise is remembering that you iterate from the BACK of the string.
+	}
+	if (remainder)
+		cout << 1;
+	cout << digit_str;
+}
+      </code>
+    </pre>
+  </div>
+  <div class="bottom" style="text-align:center">
+    <a class="footer-link" href="index.html">Home</a>
+    <a class="footer-link" href="https://twitter.com/bobbybogan">Twitter</a>
+    <a class="footer-link" href="https://www.facebook.com/robertajbogan/">Facebook</a>
+    <a class="footer-link" href="Contact_Info.html">Contact</a>
+    <p id="bottom_of_page">© 2021 Bobby Bogan</p>
+  </div>
+</body>
+
+</html>
