@@ -1,5 +1,5 @@
-# onlineresume
-My Curriculum vitae
+# Resume
+Outlining the skills, experiences, and job history so far
 
 Although the Bootstrap clearly needs to be improved upon and uploaded, and the JavaScript needs to be learned and implemented, I've made a reasonable start to becoming a full-stack developer.
 
