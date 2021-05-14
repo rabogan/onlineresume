@@ -17,22 +17,30 @@ h1{
   text-align:center;
 }
 
-h2,h3,h4,h5,h6{
-font-family: 'Cabin', sans-serif;
-}
-
 h2{
+  font-family: 'Cabin', sans-serif;
   font-size: 2.2rem;
   color:#66BFBF;
 }
 
 h3{
+  font-family: 'Cabin', sans-serif;
   color:#11999E;
   font-size: 1.6rem;
 }
 
 a{
   color:#11999E;
+  font-family:'Merriweather',serif;
+  text-decoration:none;
+}
+
+figcaption
+{
+  color:#11999E;
+  font-family:'Merriweather',serif;
+  text-decoration:none;
+  font-size: 1rem;
 }
 
 li{
@@ -50,6 +58,16 @@ hr{
   width:7.5%;
 }
 
+hr2{
+    border: dotted #EAF6F6;
+    border-bottom: none;
+    border-top-width:4px;
+    border-bottom-width:0;
+    border-left-width:0;
+    border-right-width:0;
+    width:5.5%;
+}
+
 /********************CLASS SELECTORS***************************/
 .resume{
   margin: 20px;
@@ -61,14 +79,18 @@ hr{
 
 .bottom_cloud{
   position:absolute;
-  left:450px;
-  bottom:250px;
+  left:25%;
+  bottom:35%;
 }
 
 .top_cloud{
   position:absolute;
-  right:400px;
-  top:50px;
+  right:15%;
+  top:10%;
+}
+
+.top_mountain{
+  padding-bottom: 0;
 }
 
 .prof{
@@ -76,9 +98,16 @@ hr{
   width:300px;
 }
 
+.webdevico{
+  width:25%;
+  float:left;
+  margin-top:5%;
+  margin-left:5%;
+}
+
 .sizedown{
-  height:100px;
-  width:100px;
+  height:10%;
+  width:10%;
 }
 
 .top{
@@ -104,6 +133,11 @@ hr{
 
 .footer-link{
   padding: 20px;
+  text-decoration:none;
+}
+
+.footer-link:hover{
+  color:green;
 }
 
 .just_these{
@@ -113,30 +147,23 @@ hr{
 
 .skill-row{
   width:50%;
-  margin:100px auto;  /*Remember that it is up, right, down, left, where (up/down, right/left) is equal*/
+  margin:5% auto;  /*Remember that it is up, right, down, left, where (up/down, right/left) is equal*/
   text-align:left;
   line-height:2;
 }
 
 .skill-row2{
   width:50%;
-  margin:100px auto;  /*Remember that it is up, right, down, left, where (up/down, right/left) is equal*/
+  margin:5% auto;  /*Remember that it is up, right, down, left, where (up/down, right/left) is equal*/
   text-align:right;
   line-height:2;
-}
-
-.webdevico{
-  width:25%;
-  float:left;
-  margin-top:80px;
-  margin-left:30px;
 }
 
 .tick2{
   width:25%;
   float:right;
-  margin-left:30px;
-  padding-top:70px;
+  margin-left:7.5%;
+  padding-top:10%;
 }
 
 .btn {
@@ -187,4 +214,5 @@ hr{
 /**********************ID SELECTORS****************************/
 #bottom_of_page{
   margin-bottom: 0;
+  color:#EAF6F6;
 }
